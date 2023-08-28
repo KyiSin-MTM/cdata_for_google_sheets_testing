@@ -1,4 +1,4 @@
-package cdata;
+package com.cdata.test;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -31,7 +31,7 @@ public class GSheetTesting {
 		
 //		These properties are needed in "REFRESH"
 		prop.setProperty("InitiateOAuth", "REFRESH");
-		prop.setProperty("OAuthVerifier", getVerifier("verifier_code"));
+		prop.setProperty("OAuthVerifier", retreiveVerifier("verifier_code"));
 		prop.setProperty("OAuthClientID", "9198385943-lu19pjsr05tosjehamgjbektltu2k4km.apps.googleusercontent.com");
 		prop.setProperty("OAuthClientSecret", "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");
 		prop.setProperty("OAuthSettingsLocation", "%APPDATA%\\CData\\GoogleSheets Data Provider\\OAuthSettings.txt");
@@ -251,7 +251,7 @@ public class GSheetTesting {
 		return url;
 	}
 	
-	public static String getUrl(String url) {
+	public static String getVerifier(String url) {
 		String verifierCode = null;
 		try {
             URI uri = new URI(url);
@@ -283,7 +283,7 @@ public class GSheetTesting {
         }
 	}
 	
-	public static String getVerifier(String key) {
+	public static String retreiveVerifier(String key) {
 		try (InputStream inputStream = new FileInputStream("local_storage.properties")) {
             Properties properties = new Properties();
             properties.load(inputStream);
@@ -313,7 +313,7 @@ public class GSheetTesting {
         @SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
         String callbackURL = scanner.nextLine();
-        String verifier = getUrl(callbackURL);
+        String verifier = getVerifier(callbackURL);
         storeVerifier("verifier_code", verifier);
 		selectAllData(fetchSample);
 	}
