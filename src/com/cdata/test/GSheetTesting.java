@@ -202,7 +202,7 @@ public class GSheetTesting {
 		String query = "UPDATE " + tableName + " SET B = ? WHERE Id = ?";
 		PreparedStatement pstmt = conn.prepareStatement(query);
 		 
-		pstmt.setString(1,"Kaung");
+		pstmt.setString(1,"Kyi");
 		pstmt.setString(2,"54");
 		pstmt.addBatch();      
 		 
@@ -237,7 +237,7 @@ public class GSheetTesting {
 		prop.setProperty("OAuthClientID", "9198385943-lu19pjsr05tosjehamgjbektltu2k4km.apps.googleusercontent.com");
 		prop.setProperty("OAuthClientSecret", "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");
 		prop.setProperty("CallbackURL", "http://localhost:62360");
-		Connection conn = DriverManager.getConnection("jdbc:googlesheets:",prop);
+		Connection conn = DriverManager.getConnection("jdbc:googlesheets:", prop);
 		CallableStatement cstmt = conn.prepareCall("GetOAuthAuthorizationURL");
 		boolean ret = cstmt.execute();
 		String url = null;

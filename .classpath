@@ -11,12 +11,17 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Program Files/CData/CData JDBC Driver for Google BigQuery 2023/lib/cdata.jdbc.googlebigquery.jar">
+	<classpathentry kind="lib" path="C:/Users/KyiSinShoonLaeLinn/Downloads/opencsv-5.8.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/KyiSinShoonLaeLinn/Downloads/opencsv-5.8.jar">
+	<classpathentry kind="lib" path="C:/Program Files/CData/BigQuery/cdata.jdbc.googlebigquery.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/KyiSinShoonLaeLinn/Downloads/jar_files/google-cloud-bigquery-2.31.1.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

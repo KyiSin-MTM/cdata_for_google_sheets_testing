@@ -30,6 +30,7 @@ public class GBigQueryTesting {
 		prop.setProperty("OAuthRefreshToken",
 				"1//04k1U9DTdyjAaCgYIARAAGAQSNwF-L9IrkEfwOwmg98k1Vzma2fSKqLZ0TlZLFLAprKEE-pEXwOlNAGBzT3BW5vsiq95b4b99DME");
 		prop.setProperty("OAuthSettingsLocation", "%APPDATA%\\CData\\GoogleBigQuery Data Provider\\OAuthSettings.txt");
+		prop.setProperty("RTK", "4442524A5641535552425641454E545033544D3234343532000000000000000000000000000000003131313131313131000052564E583030324336414A460000");
 
 		Connection conn = DriverManager.getConnection("jdbc:googlebigquery:", prop);
 		return conn;
@@ -229,7 +230,6 @@ public class GBigQueryTesting {
 				writer.writeNext(rowArray);
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
